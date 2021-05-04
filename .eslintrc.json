@@ -1,0 +1,22 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": false
+    },
+    "parserOptions": {
+        "ecmaVersion": 12
+    },
+    "rules": {
+        "no-dupe-else-if": "warn",
+        "semi": "warn",
+        "semi-style": ["error", "last"],
+        "no-extra-semi": "warn",
+        "no-extra-boolean-cast": "warn",
+        "no-extra-parens": "warn",
+        "no-invalid-regexp": "warn",
+        "no-empty": "warn",
+        "no-var": "warn",
+        "prefer-arrow-callback": "warn"
+    }
+}
