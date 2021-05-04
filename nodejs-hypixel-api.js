@@ -1,9 +1,8 @@
 const fetch = require('node-fetch');
-
 const base = 'https://api.hypixel.net/';
+const mojang = 'https://api.mojang.com/';
 
 async function verifyAccountName(username) {
-    let mojang = 'https://api.mojang.com/';
     let method = `users/profiles/minecraft/${username}`;
     let response = await fetch(mojang + method);
     if (response.statusText === "OK") return true;
@@ -11,7 +10,6 @@ async function verifyAccountName(username) {
 }
 
 async function verifyAccountUuid(uuid) {
-    let mojang = 'https://api.mojang.com/';
     let method = `user/profile/${uuid}`;
     let response = await fetch(mojang + method);
 
@@ -20,7 +18,6 @@ async function verifyAccountUuid(uuid) {
 }
 
 async function nameToUuid(username) {
-    let mojang = 'https://api.mojang.com/';
     let method = `users/profiles/minecraft/${username}`;
     let response = await fetch(mojang + method);
 
@@ -33,7 +30,6 @@ async function nameToUuid(username) {
 }
 
 async function uuidToName(uuid) {
-    let mojang = 'https://api.mojang.com/';
     let method = `user/profile/${uuid}`;
     let response = await fetch(mojang + method);
 
